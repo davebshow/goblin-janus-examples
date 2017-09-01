@@ -23,4 +23,5 @@ class Long(goblin.properties.Integer):
     """No long/int distinction in Python 3"""
     def to_db(self, val):
         # Make sure to serialize as long
-        return long(val)
+        if val is not None:
+            return long(val)
