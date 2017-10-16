@@ -1,6 +1,6 @@
 import datetime
-from aiogremlin.gremlin_python.driver import serializer
-from aiogremlin.gremlin_python.structure.io import graphson
+from gremlin_python.driver import serializer
+from gremlin_python.structure.io import graphson
 
 
 class DateSerializer:

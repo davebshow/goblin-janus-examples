@@ -9,4 +9,5 @@ setup(
     author_email="davebshow@gmail.com",
     description="Goblin with JanusGraph examples",
     packages=["examples"],
+    install_requires=["goblin==2.1.0rc3"]
 )

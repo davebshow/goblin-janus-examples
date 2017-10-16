@@ -2,7 +2,8 @@ import asyncio
 import goblin
 from aiogremlin import Cluster
 
-from serializer import message_serializer
+from examples import models
+from examples.serializer import message_serializer
 
 
 def get_hashable_id(val):
@@ -20,3 +21,7 @@ cluster = loop.run_until_complete(
 
 
 app = goblin.Goblin(cluster, get_hashable_id=get_hashable_id)
+
+app.register_from_module(models)
+
+

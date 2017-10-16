@@ -1,7 +1,7 @@
 import datetime
 
 import goblin
-from aiogremlin.gremlin_python.statics import long
+from gremlin_python.statics import long
 
 
 class DateTime(goblin.abc.DataType):

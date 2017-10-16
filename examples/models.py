@@ -1,5 +1,5 @@
 import goblin
-from aiogremlin.gremlin_python import Cardinality
+from gremlin_python.process.traversal import Cardinality
 from app import app
 from properties import DateTime, Long
 
@@ -12,14 +12,14 @@ class AnnotatedVertexProperty(goblin.VertexProperty):
 
 class House(goblin.Vertex):
     string_prop = AnnotatedVertexProperty(
-        goblin.String, card=Cardinality.list_)
+        goblin.String, card=Cardinality.single)
     bool_prop = AnnotatedVertexProperty(
-        goblin.Boolean, card=Cardinality.list_)
+        goblin.Boolean, card=Cardinality.single)
     float_prop = AnnotatedVertexProperty(
-        goblin.Float, card=Cardinality.list_)
+        goblin.Float, card=Cardinality.single)
     int_prop = AnnotatedVertexProperty(
-        goblin.Integer, card=Cardinality.list_)
-    long_prop = AnnotatedVertexProperty(Long, card=Cardinality.list_)
+        goblin.Integer, card=Cardinality.single)
+    long_prop = AnnotatedVertexProperty(Long, card=Cardinality.single)
 
 
 class Structure(goblin.Vertex):
